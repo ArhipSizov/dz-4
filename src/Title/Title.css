@@ -1,0 +1,28 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+img{
+    width: 100px;
+    height: 100px;
+}
+div{
+    width: 30%;
+    text-align: left;
+    width: 80%;
+    display: flex;
+    justify-content: space-around;
+}
+.info{
+    padding-left: 5px;
+    width: 40%;
+    flex-direction: column;
+}
+.num{
+    margin-top: 20px;
+}
+.buttonDiv{
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
