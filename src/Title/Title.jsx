@@ -50,8 +50,8 @@ export default function Title({name,cost,weight,id,img,editAllNum,editAllSum}){
                 <button onClick={() => editBut2(-cost)} >
             <button  className='invisBut' onClick={() => editBut(-1)}>-</button>
             </button>
-                <p className='num'>{num}</p>
-                <button onClick={() => editBut2(+cost)}>
+                <p className='num'>{num}</p>onClick={() => editBut2(+cost)}
+                <button >
                 <button className='invisBut' onClick={() => editBut(+1)}>+</button>
                 </button>
             </div>
