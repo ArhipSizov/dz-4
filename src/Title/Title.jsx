@@ -1,31 +1,78 @@
 import './Title.css';
 import { useState } from "react";
-import img from '../assets/Rectangle_2(0).png'
 
-export default function Title(props){
-    console.log(props.send1.item);
-    const [num, setNum] = useState(0);
-    function numUp() {
-            setNum(num + 1);
-      }
-      function numDown() {
-        if (num > 0) {
-        setNum(num - 1);
+
+
+export default function Title({name,cost,weight,id,img,editAllNum,editAllSum}){
+
+    const [showComponent, setShowComponent] = useState(true);
+
+    console.log(name);
+
+    const [num,setNum] = useState(0)
+    const [sum,setSum] = useState(0)
+
+    function editBut(amper) {
+        if (String(amper) === "-1" && num === 0){
+
+            setShowComponent(false);
+            return
         }
-      }
+      const result = num + amper
+      editAllNum(amper)
+      setNum(result)
+      console.log(result);
+    }
+    function editBut2(amper) {
+        let cost2 = -cost
+        console.log(cost2);
+        if (String(amper) === cost2 && sum === 0){
+            
+                setShowComponent(false);
+                return
+              };
+      const result2 = sum + amper
+      editAllSum(amper)
+      setSum(result2)
+      console.log(result2);
+    }
+
+
+
+
     return(
-        <div className='litlAll'>
+
+        showComponent && <div className='litlAll'>
             <img src={img} alt="" />
             <div className='info'>
-                <p>{props.send1.item.name}</p>
-                <p>{props.send1.item.weight}</p>
-                <p>{props.send1.item.price}</p>
+                <p>{name}</p>
+                <p>{weight}г</p>
+                <p>{cost}р</p>
             </div>
             <div className='buttonDiv'>
-                <button onClick={numDown}>-</button>
+                <button onClick={() => editBut2(-cost)} >
+            <button  className='invisBut' onClick={() => editBut(-1)}>-</button>
+            </button>
                 <p className='num'>{num}</p>
-                <button onClick={numUp}>+</button>
+                <button onClick={() => editBut2(+cost)}>
+                <button className='invisBut' onClick={() => editBut(+1)}>+</button>
+                </button>
             </div>
         </div>
     )
+
+
+
+
+    // console.log(props.send1.item);
+    // const [num, setNum] = useState(0);
+    // function numUp() {
+    //         setNum(num + 1);
+    //   }
+    //   function numDown() {
+    //     if (num > 0) {
+    //     setNum(num - 1);
+    //     }
+    //   }
+
 }

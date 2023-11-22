@@ -1,38 +1,65 @@
 import { useState } from "react";
 import "./App.css";
 import Title from "./Title/Title";
+import arrCards from "./footBurgers.json"
 
 function App() {
-  const [count, setCount] = useState(0);
 
 
-  const burger ={
-    name:"Супер сырный",
-    weight:"512г",
-    price:"550₽",
-    img:"0"
+
+
+
+
+    // const [showComponent, setShowComponent] = useState(true);
+  
+  
+    // const handleClick = () => {
+    //   setShowComponent(false);
+    // };
+  
+    // return (
+    //   <div>
+    //     {showComponent && <div>Привет, я компонент</div>}
+    //     <button onClick={handleClick}>Удалить компонент</button>
+    //   </div>
+    // )
+
+
+
+
+
+
+
+  const [burgers, setBurgers] = useState(arrCards)
+  console.log(burgers);
+  if (!burgers){
+    return <h1>Eror404</h1>
   }
-  const potato ={
-    name:"Картошка фри",
-    weight:"180г",
-    price:"245₽",
-    img:"1"
-  }
-  const hot_dog ={
-    name:"Жгучий хот-дог",
-    weight:"245г",
-    price:"239₽",
-    img:"2"
+  const [allNum,setNum] = useState(0)
+  function editAllNum(amper) {
+      setNum(allNum + amper)
   }
 
-  const [arr, setArr] = useState([burger,potato,hot_dog]);
+  const [allSum,setSum] = useState(0)
+  function editAllSum(amper2) {
+    setSum(allSum + amper2)
+}
+
+
 
   return (
     <div className="All">
-        {arr.map((item) => {
-          return <Title send1={{item}}/>
-        })}
+      <div className="container">
+      <h1>{allNum}</h1>
+      <h1>{allSum}</h1>   
+
+      </div>
+
+        {burgers.map(item => <Title {...item} key={item.id} editAllNum={editAllNum} editAllSum={editAllSum}/>
+        )}
+            
     </div>
+
   );
 }
 

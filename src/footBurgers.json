@@ -1,0 +1,23 @@
+[
+    {
+        "img":"../public/burger.png",
+        "name":"Супер сырный",
+        "cost":"550",
+        "weight":"512",
+        "id":"1"
+    },
+    {
+        "img":"../public/dog.png",
+        "name":"Картошка фри",
+        "cost":"180",
+        "weight":"245",
+        "id":"2"
+    },
+    {
+        "img":"../public/free.png",
+        "name":"Жгучий хот-дог",
+        "cost":"245",
+        "weight":"239",
+        "id":"3"
+    }
+]
