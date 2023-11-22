@@ -7,7 +7,6 @@ export default function Title({name,cost,weight,id,img,editAllNum,editAllSum}){
 
     const [showComponent, setShowComponent] = useState(true);
 
-    console.log(name);
 
     const [num,setNum] = useState(0)
     const [sum,setSum] = useState(0)
@@ -25,7 +24,6 @@ export default function Title({name,cost,weight,id,img,editAllNum,editAllSum}){
     }
     function editBut2(amper) {
         let cost2 = -cost
-        console.log(cost2);
         if (String(amper) === cost2 && sum === 0){
             
                 setShowComponent(false);
@@ -34,7 +32,6 @@ export default function Title({name,cost,weight,id,img,editAllNum,editAllSum}){
       const result2 = sum + amper
       editAllSum(amper)
       setSum(result2)
-      console.log(result2);
     }
 
 
@@ -61,18 +58,5 @@ export default function Title({name,cost,weight,id,img,editAllNum,editAllSum}){
         </div>
     )
 
-
-
-
-    // console.log(props.send1.item);
-    // const [num, setNum] = useState(0);
-    // function numUp() {
-    //         setNum(num + 1);
-    //   }
-    //   function numDown() {
-    //     if (num > 0) {
-    //     setNum(num - 1);
-    //     }
-    //   }
 
 }

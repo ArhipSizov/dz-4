@@ -10,23 +10,6 @@ function App() {
 
 
 
-    // const [showComponent, setShowComponent] = useState(true);
-  
-  
-    // const handleClick = () => {
-    //   setShowComponent(false);
-    // };
-  
-    // return (
-    //   <div>
-    //     {showComponent && <div>Привет, я компонент</div>}
-    //     <button onClick={handleClick}>Удалить компонент</button>
-    //   </div>
-    // )
-
-
-
-
 
 
 
