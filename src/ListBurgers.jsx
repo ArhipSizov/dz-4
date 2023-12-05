@@ -1,10 +1,10 @@
 import { useState } from "react";
 import "./ListBurgers.css";
-import arrCards from "./ListBurgers.json"
+import arrCard from "./ListBurgers.json"
 import Burger from "./Burger/Burger";
 
 function ListsOfBurgers() {
-
+  const arrCards = arrCard.allUsers
     const [burgers, setBurgers] = useState(arrCards)
     console.log(burgers);
     if (!burgers){

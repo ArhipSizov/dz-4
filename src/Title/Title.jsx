@@ -3,7 +3,7 @@ import { useState } from "react";
 
 
 
-export default function Title({name,cost,weight,id,img,editAllNum,editAllSum}){
+export default function Title({name,cost,weight,img,editAllNum,editAllSum}){
 
     const [showComponent, setShowComponent] = useState(true);
 
@@ -28,7 +28,7 @@ export default function Title({name,cost,weight,id,img,editAllNum,editAllSum}){
             
                 setShowComponent(false);
                 return
-              };
+              }
       const result2 = sum + amper
       editAllSum(amper)
       setSum(result2)
@@ -47,8 +47,8 @@ export default function Title({name,cost,weight,id,img,editAllNum,editAllSum}){
                 <p>{cost}р</p>
             </div>
             <div className='buttonDiv'>
-                <button onClick={() => editBut2(-cost)} >
-            <button  className='invisBut' onClick={() => editBut(-1)}>-</button>
+                <button onClick={() => editBut2(-cost)}>
+            <button  className='invisBut'  onClick={() => editBut(-1)}>-</button>
             </button>
                 <p className='num'>{num}</p>
                 <button onClick={() => editBut2(+cost)}>

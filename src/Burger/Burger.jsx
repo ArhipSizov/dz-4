@@ -2,7 +2,7 @@ import "./Burger.css";
 import BigOneBurger from "./BigOneBurger/Burger";
 import { useState } from "react";
 
-export default function Burger({ img, name, weight, cost, id }) {
+export default function Burger({ img, name, weight, cost }) {
   
 
     const [showComponent, setShowComponent] = useState(false);

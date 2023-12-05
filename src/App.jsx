@@ -10,7 +10,8 @@ function App() {
 
 
 
-
+  const [allUsers, setAllUsers] = useState(arrCards.allUsers);
+  const [activeUsers, setActiveUsers] = useState(arrCards.activeUsers)
 
 
   const [burgers, setBurgers] = useState(arrCards)

@@ -1,5 +1,6 @@
-[
-    {
+{
+    "activeUsera":[],
+    "allUsers":[{
         "img":"../public/burger550.png",
         "name":"Супер сырный",
         "cost":"550",
@@ -40,5 +41,5 @@
         "cost":"560",
         "weight":"510",
         "id":"6"
+    }]
     }
-]
