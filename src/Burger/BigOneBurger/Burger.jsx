@@ -11,7 +11,6 @@ export default function Burger({
   showComponent,
   setShowComponent,
 }) {
-  console.log(showComponent, name, img);
 
   const [num, setNum] = useState(0);
 
@@ -26,10 +25,6 @@ export default function Burger({
   }
   function setComponent() {
     setShowComponent(false);
-    console.log(446);
-  }
-  function setComponent2() {
-    setShowComponent(true);
     console.log(446);
   }
 

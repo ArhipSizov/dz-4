@@ -1,25 +1,23 @@
 import { useState } from "react";
 import "./App.css";
 import Title from "./Title/Title";
-import arrCards from "./footBurgers.json"
+import arrCard from "./ListBurgers.json"
 
 function App() {
+  const arrCards = arrCard.allUsers
+
+
+  const [showComponent] = useState(false);
 
 
 
 
 
-
-  const [allUsers, setAllUsers] = useState(arrCards.allUsers);
-  const [activeUsers, setActiveUsers] = useState(arrCards.activeUsers)
-
-
-  const [burgers, setBurgers] = useState(arrCards)
-  console.log(burgers);
+  const [burgers] = useState(arrCards)
   if (!burgers){
     return <h1>Eror404</h1>
   }
-  const [allNum,setNum] = useState(0)
+  const [allNum,setNum] = useState(1)
   function editAllNum(amper) {
       setNum(allNum + amper)
   }
@@ -31,18 +29,20 @@ function App() {
 
 
 
+
+
   return (
-    <div className="All">
+    showComponent && (<div className="All">
       <div className="container">
       <h1>{allNum}</h1>
       <h1>{allSum}</h1>   
 
       </div>
 
-        {burgers.map(item => <Title {...item} key={item.id} editAllNum={editAllNum} editAllSum={editAllSum}/>
+     {burgers.map(item => <Title {...item} key={item.id} editAllNum={editAllNum} editAllSum={editAllSum}/>
         )}
             
-    </div>
+    </div>)
 
   );
 }
