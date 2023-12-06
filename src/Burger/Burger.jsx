@@ -36,7 +36,7 @@ export default function Burger({
             <p>{cost}р</p>
           </div>
           <button onClick={setComponent}>Добавить</button>
-          <button onClick={addActiveUser}>bad</button>
+          <button onClick={addActiveUser}>addListTest</button>
         </div>
       ))}
     </div>
