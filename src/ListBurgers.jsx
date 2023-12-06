@@ -5,7 +5,7 @@ import Burger from "./Burger/Burger";
 
 function ListsOfBurgers() {
   const arrCards = arrCard.allUsers
-  const [allUsers, setAllUsers] = useState(arrCard.allUsers);
+  const [allUsers] = useState(arrCard.allUsers);
   const [activeUsers, setActiveUsers] = useState(arrCard.activeUsers)
 
 

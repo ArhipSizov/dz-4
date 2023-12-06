@@ -17,7 +17,7 @@ function App() {
   if (!burgers){
     return <h1>Eror404</h1>
   }
-  const [allNum,setNum] = useState(1)
+  const [allNum,setNum] = useState(0)
   function editAllNum(amper) {
       setNum(allNum + amper)
   }
