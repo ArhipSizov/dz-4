@@ -1,4 +1,4 @@
-import "./Burger.css";
+import "./BigOneBurger.css";
 import { useState } from "react";
 import closeImg from "../../../public/close.svg";
 
@@ -6,8 +6,6 @@ export default function Burger({
   img,
   name,
   weight,
-  cost,
-  id,
   showComponent,
   setShowComponent,
 }) {

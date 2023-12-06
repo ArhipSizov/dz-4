@@ -1,5 +1,5 @@
 import "./Burger.css";
-import BigOneBurger from "./BigOneBurger/Burger";
+import BigOneBurger from "./BigOneBurger/BigOneBurger";
 import { useState } from "react";
 
 export default function Burger({
